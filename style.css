@@ -1,0 +1,128 @@
+/* Base styling for dark mode */
+body {
+    background-color: #121212;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 70%;
+    margin: 30px auto;
+    text-align: center;
+}
+
+/* Header */
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #ff9f00;
+    text-shadow: 2px 2px 10px rgba(255, 159, 0, 0.5);
+}
+
+/* View Page */
+.question-container {
+    margin-bottom: 20px;
+    background-color: #2c2f38;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.question-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.question-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.question-heading span {
+    font-size: 1.5em;
+    font-weight: bold;
+    cursor: pointer;
+    color: #ff9f00;
+    transition: color 0.3s ease;
+}
+
+.question-heading span:hover {
+    color: #ffd700;
+}
+
+.dropdown-content {
+    display: none;
+    background-color: #333;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    text-align: left;
+}
+
+.show {
+    display: block;
+}
+
+pre {
+    background-color: #1c1c1c;
+    padding: 15px;
+    border-radius: 8px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-family: 'Courier New', monospace;
+    color: #e4e4e4;
+    overflow-x: auto;
+    margin-top: 10px;
+}
+
+.solution-button {
+    background-color: #444;
+    border: none;
+    color: #fff;
+    padding: 12px 20px;
+    margin: 10px 5px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    font-size: 1.1em;
+}
+
+.solution-button:hover {
+    background-color: #ff9f00;
+    transform: scale(1.05);
+}
+
+.solution-text {
+    margin-top: 10px;
+    background-color: #333;
+    padding: 15px;
+    border-radius: 8px;
+    display: none;
+}
+
+button:focus {
+    outline: none;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+.formatted-code {
+    background-color: #1c1c1c;
+    padding: 15px;
+    border-radius: 8px;
+    white-space: pre-wrap; /* Ensures code formatting stays intact */
+    word-wrap: break-word;
+    font-family: 'Courier New', monospace;
+    color: #e4e4e4;
+    overflow-x: auto;
+    text-align: left; /* Ensure left alignment */
+    margin-top: 10px;
+}
