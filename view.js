@@ -23,6 +23,17 @@ document.addEventListener("DOMContentLoaded", () => {
             title.addEventListener("click", () => toggleDropdown(question.id));
 
             questionHeading.appendChild(title);
+
+            // Open Link Button
+            const openLinkButton = document.createElement("button");
+            openLinkButton.textContent = "Open Link";
+            openLinkButton.classList.add("open-link-button");
+            openLinkButton.addEventListener("click", (e) => {
+                e.stopPropagation(); // Prevent dropdown from toggling
+                window.open(question.link, "_blank"); // Open link in new tab
+            });
+
+            questionHeading.appendChild(openLinkButton);
             questionElement.appendChild(questionHeading);
 
             const questionTextContainer = document.createElement("div");
@@ -33,7 +44,6 @@ document.addEventListener("DOMContentLoaded", () => {
             
             questionTextContainer.appendChild(pre); // Append <pre> element
             questionElement.appendChild(questionTextContainer);
-            
 
             const solutionsContainer = document.createElement("div");
             solutionsContainer.classList.add("solutions-container", `solutions-${question.id}`);

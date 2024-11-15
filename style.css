@@ -139,6 +139,33 @@ pre.formatted-code {
     border: 1px solid #444444;
 }
 
+.title-link {
+    text-decoration: none;
+    color: #ff9f00;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.title-link:hover {
+    color: #ffd700;
+}
+
+.open-link-button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.open-link-button:hover {
+    background-color: #0056b3;
+}
+
 .question-text pre {
     font-family: 'Consolas', serif;
     font-size: 1em;
