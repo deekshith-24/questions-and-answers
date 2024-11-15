@@ -26,9 +26,14 @@ document.addEventListener("DOMContentLoaded", () => {
             questionElement.appendChild(questionHeading);
 
             const questionTextContainer = document.createElement("div");
-            questionTextContainer.classList.add("dropdown-content", `question-${question.id}`);
-            questionTextContainer.innerHTML = `<pre>${question.question}</pre>`; // Use <pre> for proper formatting
+            questionTextContainer.classList.add("dropdown-content", `question-${question.id}`, "question-text");
+            
+            const pre = document.createElement("pre");
+            pre.textContent = question.question; // Use the raw question text
+            
+            questionTextContainer.appendChild(pre); // Append <pre> element
             questionElement.appendChild(questionTextContainer);
+            
 
             const solutionsContainer = document.createElement("div");
             solutionsContainer.classList.add("solutions-container", `solutions-${question.id}`);

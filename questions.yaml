@@ -35,3 +35,40 @@
                 return ans;
             }
         };      
+- id: 2
+  title: "Nth Root of a Number using Binary Search"
+  question: |
+    Given two numbers N and M, find the Nth root of M. The nth root of a number M is defined as a number X when raised to the power N equals M. 
+    If the 'nth root is not an integer, return -1.
+  solutions:
+    - language: "C++"
+      code: |
+        int power(long long num, int times, long long n) {
+          long long val = 1ll;
+
+          for (int i = 0; i < times; i++) {
+            val = val * num;
+
+            if (val > n) return 2;
+          }
+
+          if (val == n) return 0;
+          else if (val < n) return 1;
+          else return 2;
+        }
+
+        int NthRoot(int m, int n) {
+          int low = 1, high = n, mid;
+
+          while (low <= high) {
+            mid = high - ((high - low) / 2);
+
+            int cmp = power(mid * 1ll, m, n * 1ll);
+
+            if (cmp == 0) return mid;
+            else if (cmp == 1) low = mid + 1;
+            else high = mid - 1;
+          }
+
+          return -1;
+        }

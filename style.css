@@ -75,8 +75,11 @@ h1 {
     color: #cccccc;
     font-size: 1.15em;
     line-height: 1.8;
-    white-space: pre-wrap;
+    white-space: normal;  /* Make sure text wraps */
+    word-wrap: break-word;
     border-left: 4px solid #ffcc00;
+    width: 100%;  /* Ensure full width for wrapping */
+    box-sizing: border-box;  /* Include padding and border in width */
 }
 
 .show {
@@ -136,6 +139,16 @@ pre.formatted-code {
     border: 1px solid #444444;
 }
 
+.question-text pre {
+    font-family: 'Consolas', serif;
+    font-size: 1em;
+    line-height: 1.2;
+    color: #f4f4f4;
+    white-space: pre-wrap; /* Ensures multiline text breaks and wraps */
+    word-wrap: break-word;
+    margin-top: 10px;
+}
+
 /* Button Focus and Active States */
 button:focus {
     outline: none;
@@ -144,4 +157,94 @@ button:focus {
 
 button:active {
     transform: scale(0.98);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+    .container {
+        width: 90%;
+    }
+    
+    h1 {
+        font-size: 3em;
+    }
+    
+    .question-heading span {
+        font-size: 1.7em;
+    }
+
+    .solution-button {
+        padding: 12px 24px;
+        font-size: 1.1em;
+    }
+
+    .dropdown-content {
+        padding: 20px;
+    }
+
+    pre.formatted-code {
+        font-size: 0.95em;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    .question-heading span {
+        font-size: 1.5em;
+    }
+
+    .solution-button {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+
+    .dropdown-content {
+        padding: 15px;
+    }
+
+    pre.formatted-code {
+        font-size: 0.9em;
+    }
+
+    .question-container {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .question-heading span {
+        font-size: 1.3em;
+    }
+
+    .solution-button {
+        padding: 8px 16px;
+        font-size: 0.9em;
+    }
+
+    .dropdown-content {
+        padding: 12px;
+    }
+
+    pre.formatted-code {
+        font-size: 0.85em;
+    }
+
+    .question-container {
+        padding: 15px;
+    }
 }
