@@ -1,0 +1,37 @@
+- id: 1
+  title: "Square Root"
+  question: |
+    Given an integer n, find the square root of n. If n is not a perfect square, then return the floor value.
+    Floor value of any number is the greatest Integer which is less than or equal to that number.
+  solutions:
+    - language: "C++"
+      code: |
+        class Solution {
+          public:
+            int floorSqrt(int n) {
+                for (int i = 1; i <= n; i++) {
+                    if (i * i <= n) {}
+                    else return i - 1;
+                }
+                return 0;
+            }
+        };
+    - language: "C++"
+      code: |
+        class Solution {
+          public:
+            int floorSqrt(int n) {
+                int low = 1, high = n, mid, ans;
+                
+                while (low <= high) {
+                    mid = (low + high) / 2;
+                    
+                    if (mid * mid <= n) {
+                        ans = mid;
+                        low = mid + 1;
+                    } else high = mid - 1;
+                }
+                
+                return ans;
+            }
+        };      
