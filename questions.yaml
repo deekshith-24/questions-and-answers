@@ -2,6 +2,7 @@
   title: "Square Root"
   question: |
     Given an integer n, find the square root of n. If n is not a perfect square, then return the floor value.
+    
     Floor value of any number is the greatest Integer which is less than or equal to that number.
   solutions:
     - language: "C++"
@@ -34,11 +35,13 @@
                 
                 return ans;
             }
-        };      
+        };    
+
 - id: 2
   title: "Nth Root of a Number using Binary Search"
   question: |
     Given two numbers N and M, find the Nth root of M. The nth root of a number M is defined as a number X when raised to the power N equals M. 
+
     If the 'nth root is not an integer, return -1.
   solutions:
     - language: "C++"
